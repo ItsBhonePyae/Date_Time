@@ -14,8 +14,8 @@ public class Assignment_Birthdays {
 		LocalDate now = LocalDate.now();
 		DayOfWeek dw_bday = ld_bday.getDayOfWeek();
 		long age = ChronoUnit.YEARS.between(ld_bday, now);
-		LocalDate next_bday = ChronoUnit.YEARS.addTo(ld_bday, age);
-		long days_until = ChronoUnit.DAYS.between(next_bday, now);
+		LocalDate next_bday = ChronoUnit.YEARS.addTo(ld_bday, age+1);
+		long days_until = ChronoUnit.DAYS.between(now, next_bday);
 		
 		System.out.println("Day of Week being born: " + dw_bday);
 		System.out.println("Current age in years: " + age);
